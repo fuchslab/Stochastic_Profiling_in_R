@@ -1,12 +1,13 @@
-##################################################
+###################################################################################################
 # load packages
 library("stochprofML")
-library(ggplot2)
-library(gridExtra)
-library(dplyr)
-library(knitr)
-library(RColorBrewer)
-library(gridExtra)
+library("ggplot2") #für ggplot
+library("dplyr")
+library("knitr") 
+library("RColorBrewer") # für palette
+library("gridExtra") # for grid
+
+###################################################################################################
 get_legend<-function(myggplot){
   tmp <- ggplot_gtable(ggplot_build(myggplot))
   leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
@@ -14,8 +15,8 @@ get_legend<-function(myggplot){
   return(legend)
 }
 
-####################################
-# Functions
+###################################################################################################
+# Define Functions 
 hpi <- function(probs_distr, j.vec.all , hpi_p){
   pos <- which.max(probs_distr)   
   MLE <- j.vec.all[pos,]
@@ -47,7 +48,6 @@ hpi <- function(probs_distr, j.vec.all , hpi_p){
   
 }
 
-
 ###################################################################################################
 p.combo.sum.of.mix <- function(y,n,p.vector.est=FALSE,mu.vector.est,sigma.vector.est){
   p.vector.est.is <- p.vector.est
@@ -74,8 +74,8 @@ p.combo.sum.of.mix <- function(y,n,p.vector.est=FALSE,mu.vector.est,sigma.vector
   return(list("Prob_j"=Prob_j,"Dens_j"= Dens_j))
 }
 
-#########################################################################
-
+###################################################################################################
+# define parameter values for this study
 
 p.vector <- c(0.2,0.8)
 mu.vector <- c(2,0)
@@ -84,9 +84,8 @@ k <- 100 #number of measurement samples
 n <- 5 #the number of cells taken from each measurement sample
 gene_nr <- 3
 set_seeds <- c(1234,345)
+i <- 2
 
-
-#########################################################################
 ##############################################################################################
 # start general part
 library(stochprofML)
@@ -426,10 +425,10 @@ load("Dataset1_3_all.rda")
 
 i <- 2
 pdf(paste0( "Hist_Dens_Wellprediction.pdf"),  width = 8, height = 3.5)
-  hist(Dataset[i,],xlab="Measurements", main = paste("Histogram of simulated dataset "),freq=FALSE,breaks= 100)#seq(0,28,1))
+  hist(Dataset[i,],xlab="Measurements", main = paste("Histogram of simulated dataset "),freq=FALSE,breaks= 100, cex=1.5)#seq(0,28,1))
   lines(dens.all[[i]][1,],dens.all[[i]][nrow(j.vector.all)+3,],col="#FF7F00",lwd=3)
   lines(dens.all[[i]][1,],dens.all[[i]][2,],col="#1F78B4",lwd=3)
-  legend("topright", legend=c("Estimated density", "True density"), col=c("#1F78B4", "#FF7F00"),lwd=c(3,3), lty=c(2,2), cex=c(0.8,0.8))
+  legend("topright", legend=c("Estimated density", "True density"), col=c("#1F78B4", "#FF7F00"),lwd=c(3,3),  bty ="n",cex=1)
 dev.off()
   
 
@@ -448,6 +447,15 @@ p1<-ggplot(dt_new[1:72,], aes(Nr_Pop1,Prob,fill=as.factor(Method)))+
   xlab("# cells of population 1")+
   labs(fill="p excluded")+
   scale_x_continuous(breaks=0:5,labels = 0:5)+
+  theme_classic()+
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=14,face="bold"),
+        strip.text.x = element_text(size =14),
+        legend.title = element_text(size = 14),
+        legend.text = element_text(size = 12),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        strip.background = element_rect(colour="white", fill="white")) +
   facet_wrap(~Obs, nrow = 6)
 
 p2<-ggplot(dt_new[73:144,], aes(Nr_Pop1,Prob,fill=as.factor(Method)))+ 
@@ -458,9 +466,18 @@ p2<-ggplot(dt_new[73:144,], aes(Nr_Pop1,Prob,fill=as.factor(Method)))+
   xlab("# cells of population 1")+
   labs(fill="p included")+
   scale_x_continuous(breaks=0:5,labels = 0:5)+
+  theme_classic() +
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=14,face="bold"),
+        strip.text.x = element_text(size =14),
+        legend.title = element_text(size = 14),
+        legend.text = element_text(size = 12),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        strip.background = element_rect(colour="white", fill="white")) +
   facet_wrap(~Obs, nrow = 6)
 
-pdf(paste0( "ConDensHistos_Wellprediction.pdf"),  width = 10, height = 11)
+pdf(paste0( "ConDensHistos_Wellprediction.pdf"),  width = 14, height = 11)
 grid.arrange( p1,p2, ncol=2)
 dev.off()  
   
