@@ -15,7 +15,7 @@ All code to generate these figures is directly given in the paper. Same holds fo
 - Interactive/Interactive.R shows all code to use the interactive functions presented in Appendix E
 - Script/Script.R contains all functions to generate Figures 3 and 4
 
-#Simulation studies
+# Simulation studies
 All scripts needed for the simulation studies can be found in folder \textbf{Simulation_Studies}. All simulation studies are based on the same datasets.
 - 1_GenerateDatasets/GenerateDatasets.R generates for all five parameter settings datasets for all different pool size settings. These are saved in the respective folders
 - 2_FitDatasets/FitDatasets.R applies the stochprofML algorithm to all generated datasets. 
