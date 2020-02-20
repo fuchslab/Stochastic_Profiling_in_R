@@ -9,7 +9,7 @@ x <- seq(0.1,40,by = 0.1)
 
 Distribution1 <- dlnorm(x, meanlog = mu_1, sdlog = sigma_1)
 Distribution2 <- dlnorm(x, meanlog = mu_2, sdlog = sigma_2)
-Overlap_1_2 <- Overlap_LN_LN(mu_1, mu_2,sigma_1,sigma_2)
+Overlap_1_2 <- OVL_LN_LN(mu_1, mu_2,sigma_1,sigma_2)
 
 
 pdf("Example_Overlap.pdf",  width = 12, height = 5)
@@ -23,6 +23,7 @@ lines(x, Distribution2,col = "#1F78B4",lwd=3)
 legend("topright",c( expression(paste("LN(",mu[1]," =2.00,",sigma[1]," = 0.25)")),expression(paste("LN(",mu[2]," =2.70,",sigma[2]," = 0.20)")) ), col=c("#FF7F00","#1F78B4"), lwd=c(3,3), bty="n")
 fig_label("A", cex=2) 
 
+#function fig_label() at the end of this document
 
 #################################################################################
 #################################################################################
@@ -35,7 +36,7 @@ sigma_4 <- 0.21
 x <- seq(0.1,40,by = 0.1)
 Distribution3 <- dlnorm(x, meanlog = mu_3, sdlog = sigma_3)
 Distribution4 <- dlnorm(x, meanlog = mu_4, sdlog = sigma_4)
-Overlap_3_4 <- Overlap_LN_LN(mu_3, mu_4,sigma_3,sigma_4)
+Overlap_3_4 <- OVL_LN_LN(mu_3, mu_4,sigma_3,sigma_4)
 plot(x, Distribution3, type = "l", col="#FF7F00",lwd=3, main = paste("Overlap area:", round(bquote(.(Overlap_3_4))*100,0), "%"), xlab = "Measurements", ylab="Density", bty="n")
 lines(x, Distribution4,col = "#1F78B4",lwd=3)
 polygon(x,c(pmin(Distribution3,Distribution4)), col = "#FF7F00", border = NA)
@@ -52,7 +53,7 @@ sigma_6 <- 0.25
 x <- seq(0.1,40,by = 0.1)
 Distribution5 <- dlnorm(x, meanlog = mu_5, sdlog = sigma_5)
 Distribution6 <- dlnorm(x, meanlog = mu_6, sdlog = sigma_6)
-Overlap_5_6 <- Overlap_LN_LN(mu_5, mu_6,sigma_5,sigma_6)
+Overlap_5_6 <- OVL_LN_LN(mu_5, mu_6,sigma_5,sigma_6)
 plot(x, Distribution5, type = "l", col="#FF7F00",lwd=3, main = paste("Overlap area:", round(bquote(.(Overlap_5_6))*100,0), "%"), xlab = "Measurements", ylab="Density", bty="n")
 lines(x, Distribution6,col = "#1F78B4",lwd=3)
 polygon(x,c(pmin(Distribution5,Distribution6)), col = "#FF7F00", border = NA)
@@ -69,7 +70,7 @@ sigma_8 <- 0.2
 x <- seq(0.1,40,by = 0.1)
 Distribution7 <- dlnorm(x, meanlog = mu_7, sdlog = sigma_7)
 Distribution8 <- dlnorm(x, meanlog = mu_8, sdlog = sigma_8)
-Overlap_7_8 <- Overlap_LN_LN(mu_7, mu_8,sigma_7,sigma_8)
+Overlap_7_8 <- OVL_LN_LN(mu_7, mu_8,sigma_7,sigma_8)
 
 
 plot(x, Distribution7, type = "l", col="#FF7F00",lwd=3, main = paste("Overlap area:", round(bquote(.(Overlap_7_8))*100,0), "%"), xlab = "Measurements", ylab="Density", bty="n")

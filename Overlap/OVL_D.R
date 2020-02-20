@@ -10,7 +10,7 @@
 
 
 library(MASS)
-source("Overlap_LN_LN.R")
+source("OVL_LN_LN.R")
 
 # 60 und 200
 n1 <- 60
@@ -37,7 +37,7 @@ mu_B_D <- 2.03
 sigma_A_D <- 0.19
 sigma_B_D <- 0.2
 
-OVL_D <- Overlap_LN_LN(mu_A_D, mu_B_D, sigma_A_D, sigma_B_D)
+OVL_D <- OVL_LN_LN(mu_A_D, mu_B_D, sigma_A_D, sigma_B_D)
 
 # generate new Datasets
 A_D_1 <- list()
@@ -61,7 +61,7 @@ for(i in 1:repeat_I){
 # Calculate Overlap for each pair
 OVL_D_1_all <- c()
 for(i in 1:repeat_I){
-  OVL_D_1_all[i]<-Overlap_LN_LN(Para_A_D_1[[i]][1],Para_B_D_1[[i]][1], Para_A_D_1[[i]][2], Para_B_D_1[[i]][2])
+  OVL_D_1_all[i]<-OVL_LN_LN(Para_A_D_1[[i]][1],Para_B_D_1[[i]][1], Para_A_D_1[[i]][2], Para_B_D_1[[i]][2])
 }
 
 
@@ -102,7 +102,7 @@ for(i in 1:repeat_I){
 # Calculate Overlap for each pair
 OVL_D_2_all <- c()
 for(i in 1:repeat_I){
-  OVL_D_2_all[i]<-Overlap_LN_LN(Para_A_D_2[[i]][1],Para_B_D_2[[i]][1], Para_A_D_2[[i]][2], Para_B_D_2[[i]][2])
+  OVL_D_2_all[i]<-OVL_LN_LN(Para_A_D_2[[i]][1],Para_B_D_2[[i]][1], Para_A_D_2[[i]][2], Para_B_D_2[[i]][2])
 }
 
 
