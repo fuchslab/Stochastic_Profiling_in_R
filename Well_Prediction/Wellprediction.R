@@ -2,10 +2,8 @@
 # load packages
 library("stochprofML")
 library("ggplot2") #für ggplot
-library("dplyr")
 library("knitr") 
 library("RColorBrewer") # für palette
-#library("gridExtra") # for grid
 library("cowplot")
 
 ###################################################################################################

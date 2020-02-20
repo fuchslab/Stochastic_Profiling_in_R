@@ -1,7 +1,7 @@
 # Generate Datasets
 setwd("~/stochProfML/Paper/Pics/Overview")
 
-#Für A
+#For A
 library(stochprofML)
 set.seed(4)
 stochasticProfilingData()
