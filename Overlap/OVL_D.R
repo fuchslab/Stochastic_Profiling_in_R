@@ -45,8 +45,8 @@ B_D_1 <- list()
 
 set.seed(940)
 for(i in 1:repeat_I){
-  A_D_1[[i]] <- rlnorm(n1, meanlog = mean(mu_A_D, mu_B_D), sdlog = mean(sigma_A_D,sigma_B_D))
-  B_D_1[[i]] <- rlnorm(n2, meanlog = mean(mu_A_D, mu_B_D), sdlog = mean(sigma_A_D,sigma_B_D))
+  A_D_1[[i]] <- rlnorm(n1, meanlog = mean(c(mu_A_D, mu_B_D)), sdlog = mean(c(sigma_A_D,sigma_B_D)))
+  B_D_1[[i]] <- rlnorm(n2, meanlog = mean(c(mu_A_D, mu_B_D)), sdlog = mean(c(sigma_A_D,sigma_B_D)))
 }
 
 # fit Parameter for each dataset
@@ -86,8 +86,8 @@ B_D_2 <- list()
 
 set.seed(940)
 for(i in 1:repeat_I){
-  A_D_2[[i]] <- rlnorm(n3, meanlog = mean(mu_A_D, mu_B_D), sdlog = mean(sigma_A_D,sigma_B_D))
-  B_D_2[[i]] <- rlnorm(n4, meanlog = mean(mu_A_D, mu_B_D), sdlog = mean(sigma_A_D,sigma_B_D))
+  A_D_2[[i]] <- rlnorm(n3, meanlog = mean(c(mu_A_D, mu_B_D)), sdlog = mean(c(sigma_A_D,sigma_B_D)))
+  B_D_2[[i]] <- rlnorm(n4, meanlog = mean(c(mu_A_D, mu_B_D)), sdlog = mean(c(sigma_A_D,sigma_B_D)))
 }
 
 # fit Parameter for each dataset
