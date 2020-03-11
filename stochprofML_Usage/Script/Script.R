@@ -8,7 +8,7 @@ TY <- 2
 p <- c(0.62, 0.38)
 mu <- c(0.47, -0.87)
 sigma <- 0.03
-gene_LNLN <- r.sum.of.mixtures.LNLN(K = k, n, p, mu, rep(sigma, TY))
+gene_LNLN <- r.sum.of.mixtures.LNLN(k = k, n, p, mu, rep(sigma, TY))
 
 
 
@@ -19,7 +19,6 @@ y <- d.sum.of.mixtures(x, n, p, mu, rep(sigma, TY), logdens = FALSE)
 hist(gene_LNLN, main = paste("Simulated Gene"), breaks = 50,
     xlab = "Sum of mixtures of lognormals", ylab = "Density",
     freq = FALSE, col = "lightgrey")
-R> lines(x,y,col="blue",lwd = 2)
 lines(x, y, col = "blue", lwd = 2)
 legend("topright", legend = "data generating pdf", col = "blue", lwd = 2, bty = "n")
 dev.off()

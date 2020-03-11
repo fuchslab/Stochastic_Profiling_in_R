@@ -37,7 +37,7 @@ dev.off()
 
 # Mix Density B single cell
 
-Pop123_B <- stochprofML::d.sum.of.mixtures.EXPLN((1:2000)/100, n = 1, p.vector=p.vector_B, mu.vector =  mu.vector_B, sigma  = sigma_B, lambda= lambda_B, logden = F)
+Pop123_B <- stochprofML::d.sum.of.mixtures.EXPLN((1:2000)/100, n = 1, p.vector=p.vector_B, mu.vector =  mu.vector_B, sigma = sigma_B, lambda = lambda_B, logdens = F)
 
 svg(paste0( "Pop123mixB_dens.svg"),  width = 7, height = 8)
 plot(((1:2000)/100),Pop123_B,  lwd = 3, type = "l", col = "black")
