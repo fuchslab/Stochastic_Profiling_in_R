@@ -30,7 +30,7 @@ save(result, file="Result_B_1000.rda")
 ########################################################################################################################
 # n-cell density with Histogram of Data A
 # Plot in a Histogram
-dens_A <- stochprofML::mix.d.sum.of.mixtures.EXPLN((1:1000)/10, n.vector = 10, p.vector =  p.vector_A, mu.vector =  mu.vector_A, sigma.vector = sigma_A, lambda = lambda_A, logdens = F)
+dens_A <- stochprofML::mix.d.sum.of.mixtures.EXPLN((1:1000)/10, n.vector = 10, p.vector =  p.vector_A, mu.vector =  mu.vector_A, sigma.vector = sigma_A, lambda = lambda_A)
 
 svg(paste0( "histA_fitdens.svg"),  width = 7, height = 8)
 hist(A, breaks=seq(-0.5, 100, by = 1), freq = FALSE, col = "black", main = "Sample A", border = "black")
@@ -41,7 +41,7 @@ dev.off()
 
 ## n-cell density with Histogram of Data B
 # Plot in a Histogram
-dens_B <- stochprofML::mix.d.sum.of.mixtures.EXPLN((1:1500)/10, n.vector = n_vektor, p.vector =  p.vector_B, mu.vector =  mu.vector_B, sigma.vector = sigma_B,lambda = lambda_B, logdens = F)
+dens_B <- stochprofML::mix.d.sum.of.mixtures.EXPLN((1:1500)/10, n.vector = n_vektor, p.vector =  p.vector_B, mu.vector =  mu.vector_B, sigma.vector = sigma_B,lambda = lambda_B)
 
 svg(paste0( "histB_fitdens.svg"),  width = 7, height = 8)
 hist(B, breaks=seq(-0.5, 150, by = 1), freq = FALSE, col = "black", main = "Sample B", border ="black")
