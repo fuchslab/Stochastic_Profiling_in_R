@@ -43,7 +43,7 @@ for (j in 1:n_rep) {
   name_data <- paste("n_vector", j, sep = "_")
   names(result_fitting)[j] <- name_data
   
-  save(result_fitting, file = "Fitting_mix1_n1000.rda")
+  save(result_fitting, file = "Fitting_mix1_n1000_complete.rda")
   
 }
 

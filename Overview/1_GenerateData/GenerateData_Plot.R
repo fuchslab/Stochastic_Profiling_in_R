@@ -52,7 +52,7 @@ stochasticProfilingData()
 # how many populations
 3
 # number of samples
-100
+1000
 # all same cellnumber
 2
 # enter name of variable

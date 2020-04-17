@@ -44,8 +44,8 @@ p_true <- c(0.2, 0.8)
 mu_true <- c(2, 0)
 sigma_true <- 0.2
 
-# find min and max and mean of the parameters of all 1000 datasets for one pool
-# size
+# find 2.5%, 97,5% and median of the fitted parameters of all 1000 datasets for one cell number
+
 
 p_all_3<-apply(p,1,quantile,probs=c(0.025,0.5,0.975))
 mu1_all_3<-apply(mu_1,1,quantile,probs=c(0.025,0.5,0.975))

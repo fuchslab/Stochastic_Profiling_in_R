@@ -22,8 +22,6 @@ n3 <- 60
 n4 <- 60
 
 pdf("Overlap_D.pdf",  width = 12, height = 3)
-
-
 par(mfrow=c(1,2))
 
 repeat_I <- 1000

@@ -27,7 +27,6 @@ dev.off()
 library(stochprofML)
 
 pdf(paste0("Simulated_Gene_4.pdf"))
-par(mfrow(c(2,2)))
 set.seed(20)
 result <- stochprof.loop(model = "LN-LN", 
     dataset = matrix(gene_LNLN, ncol = 1), n = n, TY = TY, 

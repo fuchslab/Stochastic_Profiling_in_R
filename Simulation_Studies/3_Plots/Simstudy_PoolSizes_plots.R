@@ -50,7 +50,7 @@ for (i in 1:9) {
   }
 }
 
-# p-plots
+# generate dataframes
 p_set1 <- data.frame(p_lower = c(t(p_CI_lower)), p = c(t(p)), p_upper = c(t(p_CI_upper)))
 mu_1_set1 <- data.frame(mu_1_lower = c(t(mu_1_CI_lower)), mu_1 = c(t(mu_1)), mu_1_upper = c(t(mu_1_CI_upper)))
 mu_2_set1 <- data.frame(mu_2_lower = c(t(mu_2_CI_lower)), mu_2 = c(t(mu_2)), mu_2_upper = c(t(mu_2_CI_upper)))

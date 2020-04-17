@@ -12,8 +12,9 @@ All code can be found in the folder **Overview**
 
 # Usage of stochprofML: Figures 3 + 4 and Appendix E
 All code to generate these figures is directly given in the paper. Same holds for the code given in Appendix E. Nevertheless, we included everything in this repository in the folder **stochprofML_Usage**
-- *Interactive/Interactive.R* shows all code to use the interactive functions presented in Appendix E
 - *Script/Script.R* contains all functions to generate Figures 3 and 4
+- *Interactive/Interactive.R* shows all code to use the interactive functions presented in Appendix E
+
 
 # Simulation studies
 All scripts needed for the simulation studies can be found in folder **Simulation_Studies**. All simulation studies are based on the same datasets.

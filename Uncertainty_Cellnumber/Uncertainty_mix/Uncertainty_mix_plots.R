@@ -126,12 +126,11 @@ vioplot::vioplot(list(p_mix1$p, p_mix2$p), names = c(""), main = "", yaxt = "n",
   ylab = "", col = "lightgrey")
 axis(side = 2, at = seq(0, 1, by = 0.2), seq(0, 1, by = 0.2), cex.axis = 1.3, las = 1)
 mtext(expression(p), side = 2, line = 3, las = 1, cex = 1.5)
-lines(c(0.6, 1.4), c(0.2, 0.2), col = "#FF7F00", lw = 2, lty = 2, )
-lines(c(0.6, 1.4), c(p_set1$p[7001], p_set1$p[7001]), col = "#1F78B4", lw = 2, lty = 2, 
-  )
-lines(c(1.6, 2.4), c(0.2, 0.2), col = "#FF7F00", lw = 2, lty = 2, )
+lines(c(0.6, 1.4), c(0.2, 0.2), col = "#FF7F00", lw = 2, lty = 2 )
+lines(c(0.6, 1.4), c(p_set1$p[7001], p_set1$p[7001]), col = "#1F78B4", lw = 2, lty = 2)
+lines(c(1.6, 2.4), c(0.2, 0.2), col = "#FF7F00", lw = 2, lty = 2 )
 lines(c(1.6, 2.4), c(p_set1$p[8001][1], p_set1$p[8001][1]), col = "#1F78B4", lw = 2, 
-  lty = 2, )
+  lty = 2 )
 axis(side = 1, at = c(1, 2), c("Pool:
 1-2-5-10
 cells", "Pool:
@@ -143,12 +142,12 @@ vioplot::vioplot(list(mu_1_mix1$mu_1, mu_1_mix2$mu_1), names = c(""), main = "",
   yaxt = "n", ylab = "", col = "lightgrey")
 axis(side = 2, at = seq(0, 4, by = 1), seq(0, 4, by = 1), cex.axis = 1.3, las = 1)
 mtext(expression(mu[1]), side = 2, line = 3, las = 1, cex = 1.5)
-lines(c(0.6, 1.4), c(2, 2), col = "#FF7F00", lw = 2, lty = 2, )
+lines(c(0.6, 1.4), c(2, 2), col = "#FF7F00", lw = 2, lty = 2 )
 lines(c(0.6, 1.4), c(mu_1_set1$mu_1[7001], mu_1_set1$mu_1[7001]), col = "#1F78B4", 
-  lw = 2, lty = 2, )
-lines(c(1.6, 2.4), c(2, 2), col = "#FF7F00", lw = 2, lty = 2, )
+  lw = 2, lty = 2 )
+lines(c(1.6, 2.4), c(2, 2), col = "#FF7F00", lw = 2, lty = 2 )
 lines(c(1.6, 2.4), c(mu_1_set1$mu_1[8001], mu_1_set1$mu_1[8001]), col = "#1F78B4", 
-  lw = 2, lty = 2, )
+  lw = 2, lty = 2 )
 axis(side = 1, at = c(1, 2), c("Pool:
 1-2-5-10
 cells", "Pool:
@@ -161,12 +160,12 @@ vioplot::vioplot(list(mu_2_mix1$mu_2, mu_2_mix2$mu_2), names = c(""), main = "",
 axis(side = 2, at = seq(-40, 10, by = 10), seq(-40, 10, by = 10), cex.axis = 1.3, 
   las = 1)
 mtext(expression(mu[2]), side = 2, line = 3, las = 1, cex = 1.5)
-lines(c(0.6, 1.4), c(0, 0), col = "#FF7F00", lw = 2, lty = 2, )
+lines(c(0.6, 1.4), c(0, 0), col = "#FF7F00", lw = 2, lty = 2 )
 lines(c(0.6, 1.4), c(mu_2_set1$mu_2[7001], mu_2_set1$mu_2[7001]), col = "#1F78B4", 
-  lw = 2, lty = 2, )
-lines(c(1.6, 2.4), c(0, 0), col = "#FF7F00", lw = 2, lty = 2, )
+  lw = 2, lty = 2 )
+lines(c(1.6, 2.4), c(0, 0), col = "#FF7F00", lw = 2, lty = 2 )
 lines(c(1.6, 2.4), c(mu_2_set1$mu_2[8001], mu_2_set1$mu_2[8001]), col = "#1F78B4", 
-  lw = 2, lty = 2, )
+  lw = 2, lty = 2 )
 
 axis(side = 1, at = c(1, 2), c("Pool:
 1-2-5-10
@@ -180,12 +179,12 @@ vioplot::vioplot(list(sigma_mix1$sigma, sigma_mix2$sigma), names = c(""), main =
 axis(side = 2, at = seq(0, 1.4, by = 0.2), seq(0, 1.4, by = 0.2), cex.axis = 1.3, 
   las = 1)
 mtext(expression(sigma), side = 2, line = 3, las = 1, cex = 1.5)
-lines(c(0.6, 1.4), c(0.2, 0.2), col = "#FF7F00", lw = 2, lty = 2, )
+lines(c(0.6, 1.4), c(0.2, 0.2), col = "#FF7F00", lw = 2, lty = 2 )
 lines(c(0.6, 1.4), c(sigma_set1$sigma[7001], sigma_set1$sigma[7001]), col = "#1F78B4", 
-  lw = 2, lty = 2, )
-lines(c(1.6, 2.4), c(0.2, 0.2), col = "#FF7F00", lw = 2, lty = 2, )
+  lw = 2, lty = 2 )
+lines(c(1.6, 2.4), c(0.2, 0.2), col = "#FF7F00", lw = 2, lty = 2)
 lines(c(1.6, 2.4), c(sigma_set1$sigma[8001], sigma_set1$sigma[8001]), col = "#1F78B4", 
-  lw = 2, lty = 2, )
+  lw = 2, lty = 2 )
 
 axis(side = 1, at = c(1, 2), c("Pool:
 1-2-5-10
